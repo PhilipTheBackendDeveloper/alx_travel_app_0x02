@@ -6,6 +6,7 @@ Sure! Here’s a comprehensive `README.md` for your **`alx_travel_app_0x00`** pr
 # ALX Travel App 0x00
 
 ## Overview
+
 ALX Travel App is a Django-based web application for managing travel listings, bookings, and reviews. This iteration focuses on:
 
 - Django project setup with REST API and Swagger documentation
@@ -19,9 +20,11 @@ ALX Travel App is a Django-based web application for managing travel listings, b
 ## Project Setup
 
 ### 1. Clone the repository
+
 ```bash
-git clone https://github.com/<your-username>/alx_travel_app_0x00.git
+git clone https://github.com/philipTheBackendDeveloper/alx_travel_app_0x00.git
 cd alx_travel_app_0x00
+```
 ````
 
 ### 2. Create a virtual environment and activate
@@ -71,36 +74,36 @@ DATABASES = {
 
 ### Listing
 
-* `title` (CharField)
-* `description` (TextField)
-* `price_per_night` (DecimalField)
-* `location` (CharField)
-* `created_at` (DateTimeField)
+- `title` (CharField)
+- `description` (TextField)
+- `price_per_night` (DecimalField)
+- `location` (CharField)
+- `created_at` (DateTimeField)
 
 ### Booking
 
-* `listing` (ForeignKey to Listing)
-* `user` (ForeignKey to Django User)
-* `check_in` (DateField)
-* `check_out` (DateField)
-* `guests` (PositiveIntegerField)
-* `created_at` (DateTimeField)
+- `listing` (ForeignKey to Listing)
+- `user` (ForeignKey to Django User)
+- `check_in` (DateField)
+- `check_out` (DateField)
+- `guests` (PositiveIntegerField)
+- `created_at` (DateTimeField)
 
 ### Review
 
-* `listing` (ForeignKey to Listing)
-* `user` (ForeignKey to Django User)
-* `rating` (1-5)
-* `comment` (TextField)
-* `created_at` (DateTimeField)
-* Unique constraint on (`listing`, `user`) to prevent duplicate reviews
+- `listing` (ForeignKey to Listing)
+- `user` (ForeignKey to Django User)
+- `rating` (1-5)
+- `comment` (TextField)
+- `created_at` (DateTimeField)
+- Unique constraint on (`listing`, `user`) to prevent duplicate reviews
 
 ---
 
 ## API Serializers
 
-* `ListingSerializer` → Serializes all Listing fields
-* `BookingSerializer` → Serializes all Booking fields
+- `ListingSerializer` → Serializes all Listing fields
+- `BookingSerializer` → Serializes all Booking fields
 
 ---
 
@@ -113,8 +116,8 @@ python manage.py migrate
 
 This will create tables for:
 
-* Django built-in apps: auth, admin, sessions, contenttypes
-* Listings app: Listing, Booking, Review
+- Django built-in apps: auth, admin, sessions, contenttypes
+- Listings app: Listing, Booking, Review
 
 ---
 
@@ -145,4 +148,3 @@ http://127.0.0.1:8000/swagger/
 ```
 
 ---
-
